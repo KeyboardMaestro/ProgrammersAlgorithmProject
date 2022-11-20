@@ -9,6 +9,7 @@ public class Babbling {
             input[index] = scanner.nextLine();
             index++;
         }
+        System.out.println(solution(input));
     }
     public static int solution(String[] babbling) {
         int answer = 0;
