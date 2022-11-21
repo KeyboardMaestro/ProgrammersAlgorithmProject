@@ -3,7 +3,7 @@ public class KakaoPersonalities {
 
     }
     public String solution(String[] survey, int[] choices) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         int[] scores = new int[4];
         int index = 0;
         for (int i = 0; i < survey.length; i++){
@@ -21,24 +21,24 @@ public class KakaoPersonalities {
         for (int i : scores){
             if( i <= 0){
                 switch (index) {
-                    case 0 -> answer += 'R';
-                    case 1 -> answer += 'C';
-                    case 2 -> answer += 'J';
-                    case 3 -> answer += 'A';
+                    case 0 -> answer.append('R');
+                    case 1 -> answer.append('C');
+                    case 2 -> answer.append('J');
+                    case 3 -> answer.append('A');
                 }
                 index++;
             }
             else {
                 switch (index) {
-                    case 0 -> answer += 'T';
-                    case 1 -> answer += 'F';
-                    case 2 -> answer += 'M';
-                    case 3 -> answer += 'N';
+                    case 0 -> answer.append('T');
+                    case 1 -> answer.append('F');
+                    case 2 -> answer.append('M');
+                    case 3 -> answer.append('N');
                 }
                 index++;
             }
         }
-        return answer;
+        return answer.toString();
     }
 }
 
