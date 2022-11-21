@@ -2,7 +2,6 @@ import java.math.*;
 
 public class Rectangle {
     public static void main(String[] args) {
-
     }
     public int solution(int[][] dots) {
         int min_x = dots[0][0], min_y = dots[0][1], max_x = dots[0][0], max_y = dots[0][1];
