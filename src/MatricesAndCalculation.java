@@ -33,13 +33,13 @@ public class MatricesAndCalculation {
         int columnLength = rc.length; // 행의 개수
         temp[0] = rc[0][rowLength - 1];
         temp[1] = rc[columnLength - 1][0];
-        for (int i = rc[0].length - 1; i >= 1; i--) {
+        for (int i = rowLength - 1; i >= 1; i--) {
             rc[0][i] = rc[0][i - 1]; // 첫행 우측으로
             rc[rc.length-1][rowLength-1-i] = rc[rc.length-1][rowLength-1-(i-1)]; // 마지막행 좌측으로
         }
-        for (int i = rc.length-1; i >= 2; i--){
+        for (int i = columnLength-1; i >= 1; i--){
             rc[i][rowLength-1] = rc[i-1][rowLength-1]; // 마지막열 아래로 내리기
-            rc[i-2][0] = rc[i-1][0]; // 첫열 위로 올리기
+            rc[columnLength-1-i][0] = rc[columnLength-1-(i-1)][0]; // 첫열 위로 올리기
         }
         rc[1][rowLength-1] = temp[0]; // 회전하면서 소거된 값 입력
         rc[columnLength-2][0] = temp[1]; // 회전하며 소거된 값 입력
