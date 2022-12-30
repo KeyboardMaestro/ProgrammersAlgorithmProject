@@ -18,4 +18,4 @@ public class Tournament {
         return answer;
     }
 }
-// Resource : https://school.programmers.co.kr/learn/courses/30/lessons/12985#qna
+// Resource : https://school.programmers.co.kr/learn/courses/30/lessons/12985
