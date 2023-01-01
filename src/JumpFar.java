@@ -1,13 +1,18 @@
 public class JumpFar {
-    public long solution(int n) {
-        long answer = 0;
-        long temp1 = 0;
-        long temp2 = 1;
-        for (int i = 0; i < n;i++){
-            answer = (temp1 + temp2) % 1234567;
-            temp1 = temp2;
-            temp2 = answer;
+    private static long[] cache;
+    public static long solution(int n) {
+        cache = new long[n+1];
+        long answer = fibo(n)%1234567;
+        return answer;
+    }
+    public static long fibo(int n){
+        if (n <= 1){
+            return 1;
         }
+        if (cache[n] != 0)
+            return cache[n];
+        long answer = fibo(n-1) + fibo(n-2);
+        cache[n] = answer%1234567;
         return answer;
     }
 }
