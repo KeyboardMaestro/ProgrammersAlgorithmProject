@@ -11,9 +11,7 @@ public class H_Index {
                 hPosition = i+1;
             }
         else {
-            for (int i = 0 ; i < data.length; i++){
-                hPosition = i+1;
-            }
+            hPosition = data.length;
         }
         return hPosition;
     }
