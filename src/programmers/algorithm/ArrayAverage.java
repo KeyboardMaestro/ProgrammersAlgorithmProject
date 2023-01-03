@@ -1,5 +1,5 @@
+package programmers.algorithm;
 import java.util.Arrays;
-
 public class ArrayAverage{
     public static void main(String[] args) {
 

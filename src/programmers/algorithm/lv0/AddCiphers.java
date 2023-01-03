@@ -1,3 +1,4 @@
+package programmers.algorithm.lv0;
 public class AddCiphers {
     public int solution(int n) {
         int answer = 0;
