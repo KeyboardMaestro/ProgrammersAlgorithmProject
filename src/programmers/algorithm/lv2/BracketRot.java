@@ -1,10 +1,5 @@
 package programmers.algorithm.lv2;
-
-import javax.xml.transform.SourceLocator;
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.Stack;
-
 public class BracketRot {
     public static void main(String[] args) {
         String input ="}]()[{";
