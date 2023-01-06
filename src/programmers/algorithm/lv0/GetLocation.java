@@ -14,3 +14,4 @@ public class GetLocation {
             return 0;
     }
 }
+// Resource : https://school.programmers.co.kr/learn/courses/30/lessons/120841
