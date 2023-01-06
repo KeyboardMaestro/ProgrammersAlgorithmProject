@@ -1,5 +1,5 @@
+package programmers.algorithm.lv3;
 import java.util.Arrays;
-
 public class IntegerTriangle {
     public static int solution(int[][] triangle) {
         int step = 0;

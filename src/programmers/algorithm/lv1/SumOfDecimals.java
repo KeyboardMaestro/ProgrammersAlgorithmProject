@@ -1,3 +1,4 @@
+package programmers.algorithm.lv1;
 public class SumOfDecimals {
     public int solution(int n) {
         int answer = 0;
