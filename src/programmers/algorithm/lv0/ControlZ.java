@@ -8,6 +8,19 @@ public class ControlZ {
     }
     public  static int solution(String s) {
         int answer = 0;
+        int temp = 0;
+        for (String string : s.split(" ")){
+            if (string.equals("Z"))
+                answer -= temp;
+            else{
+                answer += Integer.parseInt(string);
+                temp = Integer.parseInt(string);
+            }
+        }
+        return answer;
+    }
+    public static int solution2(String s){
+        int answer = 0;
         Stack<Integer> numbers = new Stack<>();
         for (String string : s.split(" ")){
             if (string.equals("Z"))
