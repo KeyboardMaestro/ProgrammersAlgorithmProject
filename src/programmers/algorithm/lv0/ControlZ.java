@@ -5,8 +5,9 @@ import java.util.Stack;
 public class ControlZ {
     public static void main(String[] args) {
         solution("1 2 Z 3");
+
     }
-    public  static int solution(String s) {
+    public  static int solution (String s) {
         int answer = 0;
         int temp = 0;
         for (String string : s.split(" ")){
@@ -19,7 +20,8 @@ public class ControlZ {
         }
         return answer;
     }
-    public static int solution2(String s){
+
+    public static int solution2 (String s){
         int answer = 0;
         Stack<Integer> numbers = new Stack<>();
         for (String string : s.split(" ")){
