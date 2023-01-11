@@ -1,14 +1,21 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Fibonacci {
+    private List<Integer> fibo;
     public int solution(int n) {
-        int answer = 0;
-        int fibo = 1;
-        int temp = 0;
-        for (int i = 1; i < n; i++){
-            answer = (fibo + temp) % 1234567;
-            temp = fibo;
-            fibo = answer;
-        }
-        return answer;
+        fibo = new ArrayList<>();
+        fibo.add(1);
+        return fibonacci(n);
+    }
+    private int fibonacci(int num){
+        if (num == 1)
+            return 1;
+        if (fibo.size()-1 >= num)
+            return fibo.get(num);
+        int answer = fibonacci(num - 1) + fibonacci(num - 2);
+        return answer % 1234567;
     }
 }
 
